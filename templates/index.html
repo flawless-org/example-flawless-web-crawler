@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Flawless Crawler</h1>
+
+<div id="input">
+    <form id="new-job" hx-post="/new-job" hx-target="#list" hx-on--after-request="this.reset()">
+        <input name="url" type="text" placeholder="https://news.ycombinator.com">
+        <button type="submit">START</button>
+    </form>
+
+    <div id="list" hx-get="/list" hx-trigger="every 0.2s">
+
+    </div>
+</div>
+
+{% endblock %}

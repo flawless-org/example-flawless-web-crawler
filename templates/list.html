@@ -1,0 +1,12 @@
+{% for job in progress %}
+<div class="job">
+    <div class="first-row"></div>
+    <div class="job-name"> {{ job.url }} </div>
+    <div class="links-left"></div>
+
+    {% for item in job.list %}
+    <div class="status {{ item.0 }}"> {{ item.1 }} </div>
+    <div class="domain"> {{ item.2 }} </div>
+    {% endfor %}
+</div>
+{% endfor %}

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'SF Monog Regular';
+    src: url('https://flawless.dev/fonts/sf-mono-regular.woff2'),
+}
+
+html {
+    overflow-y: scroll;
+}
+
+a {
+    color: black;
+}
+
+.highlight {
+    background-color: antiquewhite;
+}
+
+main {
+    max-width: 42.5rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    padding: 1rem;
+
+    font-size: 1.2rem;
+    font-family: 'ui-monospace', 'SF Monog Regular', Consolas, 'Liberation Mono', 'Courier New', monospace;
+    color: black;
+}
+
+#new-job input {
+    width: 36rem;
+    font-size: 1.2rem;
+    height: 1.6rem;
+    padding-left: 0.3rem;
+    margin-left: 0.15rem;
+    border: 1px solid gray;
+}
+
+#new-job button {
+    font-size: 1.2rem;
+    border: 1px solid gray;
+}
+
+#list {
+    margin-top: 2rem;
+    border-top: 1px dashed gray;
+}
+
+.job {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: [line-start] 80px [status-end job] 350px [job-end] auto [links-left] 120px [line-end];
+}
+
+.job-name {
+    grid-row: 1/2;
+    grid-column: job/job-end;
+    place-self: center;
+    width: 100%;
+    margin-bottom: -1px;
+    z-index: 2;
+    border: 1px solid black;
+    color: darkslategray;
+    font-style: italic;
+    font-size: 1rem;
+    padding-top: 4px;
+    padding-left: 4px;
+    border-bottom: 4px solid white !important;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.first-row {
+    grid-column: line-start/line-end;
+    grid-row: 1/2;
+    border-bottom: 1px solid black;
+}
+
+.links-left {
+    padding-top: 3px;
+    font-size: 0.8rem;
+    grid-column: links-left/line-end;
+    grid-row: 1/2;
+}
+
+.status {
+    grid-column: line-start/status-end;
+
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.domain {
+    grid-column: job/line-end;
+
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: darkgoldenrod;
+}
+
+.green {
+    color: darkgreen;
+}
+
+.red {
+    color: red;
+}

@@ -1,0 +1,18 @@
+[package]
+name = "flawless-crawler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crawler = { path = "workflows/crawler" }
+flawless-utils = "1.0.0-beta.3"
+tokio = { version = "1", features = ["full"] }
+axum = "0.7"
+askama = "0.12"
+serde = { version = "1", features = ["derive"] }
+
+[build-dependencies]
+flawless-utils = "1.0.0-beta.3"
+
+[workspace]
+members = ["workflows/crawler"]
